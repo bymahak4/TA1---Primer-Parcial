@@ -8,5 +8,15 @@
         echo "Edad: {$_POST['edad']} <br />";
         echo "Correo: {$_POST['email']}";
     }
+    
+    if($_POST["nombre"] != $_POST["apellido"]) {
+        echo "<h2>Persona Agregada correctamente</h2><br/>";
+        mostrarPersona();
+     }
+     else { 
+        echo "<h2>Hubo un problema al procesar la solicitud</h2>";
+        header('location:  error500.php');
+     }
+    
 
-    mostrarPersona();
+    
